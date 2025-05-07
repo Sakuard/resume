@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Huang - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid #999;
+            margin-bottom: 3px;
+            padding-bottom: 2px;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .section-header {
+            margin: 6px 0 2px 0;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            border-bottom: 1px solid #999;
+            position: relative;
+        }
+        
+        .summary {
+            text-align: justify;
+            padding: 0 5px;
+            margin: 2px 0;
+        }
+        
+        .experience-item {
+            margin-bottom: 3px;
+            padding: 0 5px;
+        }
+        
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        
+        .position-title {
+            font-weight: bold;
+        }
+
+        .subtitle {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            padding-left: 5px;
+        }
+        
+        .company-location {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1px;
+            font-style: italic;
+        }
+        
+        ul {
+            margin: 2px 0;
+            padding-left: 18px;
+        }
+        
+        li {
+            margin-bottom: 1px;
+            list-style-type: disc;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+        
+        .skills-column {
+            flex: 0 0 50%;
+        }
+        
+        .skill-title {
+            font-weight: bold;
+        }
+        
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+            padding: 0 5px;
+        }
+        
+        .university {
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+        
+        .skills-cell {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2px;
+        }
+        
+        .skill-item {
+            margin-bottom: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Matt Huang</div>
+    
+    <div class="contact-info">
+        <span>(+886) 0987-060-100</span> | 
+        <span>matt.web.tw@gmail.com</span>
+    </div>
+    
+    <div class="section-header">Summary</div>
+    <div class="summary">
+        Backend Engineer with 3 years of software development experience—including 1 year in DevOps/SRE—specializing in architecting and automating CI/CD pipelines, containerizing and deploying services on GKE, and ensuring reliability at scale using GitLab CI, Docker, Helm, Terraform and DataDog.
+    </div>
+    
+    <div class="section-header">Professional Experience</div>
+    <div class="experience-item">
+        <div class="position-header">
+            <span class="position-title">Site Reliability Engineer (CI/CD, Terraform, Helmfile, Datadog)</span>
+            <span>May 2024 - Current</span>
+        </div>
+        <div class="company-location">
+            <span>Moway Tech</span>
+            <span>Taichung, Taiwan</span>
+        </div>
+        <ul>
+            <li>Deployed service on GKE with Helm charts, Terraform (Infrastructure as Code) and GitLab-Agent</li>
+            <li>Monitored service's logs and metrics with Datadog and GCP Cloud Monitoring</li>
+            <li>Built a reliable monitoring system with Datadog to enhance service stability</li>
+            <li>Designed and optimized a reusable Helm Chart to enable flexible and scalable service management</li>
+            <li>Modularized GitLab CI configurations into reusable templates for consistent and scalable pipeline management</li>
+        </ul>
+    </div>
+    
+    <div class="experience-item">
+        <div class="position-header">
+            <span class="position-title">Full-Stack Engineer (Vue.js, Node.js, MSSQL)</span>
+            <span>Oct 2022 - Apr 2024</span>
+        </div>
+        <div class="company-location">
+            <span>SuperAlloy</span>
+            <span>Yunlin, Taiwan</span>
+        </div>
+        <ul>
+            <li>Built a temporary file storage system with access control using Vue, Node.js, and MSSQL</li>
+            <li>Achieved over 80% improvement in response time by optimizing database queries with open-cursor and Redis</li>
+            <li>Optimized API performance by refactoring ORM-based DB operations into stored procedures, achieving a 30% improvement</li>
+        </ul>
+    </div>
+    
+    <div class="section-header">Side Projects</div>
+    <div class="experience-item">
+        <div class="position-header">
+            <span class="position-title">Line QA-Bot</span>
+        </div>
+        <ul>
+            <li>Architected monorepo structure for managing microservices</li>
+            <li>Engineered modular CI/CD templates separating standard and monorepo deployment patterns</li>
+            <li>Designed scalable Helmfile infrastructure enabling cross-environment management</li>
+            <li>Implemented SQLite for accounting and transaction management</li>
+            <li>Managed GCP project's infrastructure deployment through Terraform</li>
+            <li>Developed Python backend integrating LLM APIs with custom fine-tuned system prompts</li>
+        </ul>
+    </div>
+    
+    <div class="experience-item">
+        <div class="position-header">
+            <span class="position-title">Engineered a flexible and scalable infrastructure for "程人頻道"</span>
+        </div>
+        <span class="subtitle">techporn.io</span>
+        <ul>
+            <li>Achieved 50% cost reduction while upgrading from GCE to GKE</li>
+            <li>Designed modular CI/CD templates for cross-project adoption</li>
+            <li>Designed scalable Helmfile infrastructure enabling cross-environment management</li>
+        </ul>
+    </div>
+    
+    <div class="section-header">Skills</div>
+    <div class="skills-grid">
+        <div class="skills-cell">
+            <div class="skill-item"><span class="skill-title">Programming Languages:</span> Node.js, Python</div>
+            <div class="skill-item"><span class="skill-title">Framework:</span> Express.js, FastAPI</div>
+            <div class="skill-item"><span class="skill-title">Database:</span> MSSQL, SQLite, Redis</div>
+            <div class="skill-item"><span class="skill-title">CI/CD:</span> Gitlab-CI, GitLab-Agent, Helmfile</div>
+        </div>
+        <div class="skills-cell">
+            <div class="skill-item"><span class="skill-title">Infrastructure as Code:</span> Terraform</div>
+            <div class="skill-item"><span class="skill-title">Cloud-Native:</span> Kubernetes, GKE (GCP)</div>
+            <div class="skill-item"><span class="skill-title">OS:</span> Linux, Shell</div>
+            <div class="skill-item"><span class="skill-title">Monitoring:</span> Datadog, GCP Cloud Monitoring</div>
+        </div>
+    </div>
+    
+    <div class="section-header">Education & Certificate</div>
+    <div class="education-item">
+        <div class="university">National Yunlin University of Science and Technology</div>
+        <div>July 2013 - June 2017</div>
+    </div>
+    <div class="education-item">
+        <div>Bachelor of Electronic Engineer</div>
+        <div></div>
+    </div>
+    <div class="education-item">
+        <div>Google Professional Cloud Architect</div>
+        <div>Mar 2025</div>
+    </div>
+    
+    <div class="section-header">Languages</div>
+    <div style="display: flex; padding: 0 5px; margin-bottom: 3px;">
+        <div style="margin-right: 40px;">Mandarin (Native)</div>
+        <div>English (Professional Working Proficiency)</div>
+    </div>
+</body>
+</html>
