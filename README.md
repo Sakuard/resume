@@ -4,7 +4,7 @@
 
 I am Matt.
 
-I have over 6 years of experience in CI/CD, development, and automation.
+I have over 7 years of experience in CI/CD, development, and automation.
 
 I am familiar with IaC, Helm, Kubernetes, and monitoring tools.
 
