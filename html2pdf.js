@@ -4,7 +4,8 @@ require('dotenv').config();
 
 async function convertHTMLtoPDF() {
   const browser = await puppeteer.launch({
-    headless: 'new'
+    headless: 'new',
+    args: ['--allow-file-access-from-files']
   });
   
   try {
@@ -20,6 +21,8 @@ async function convertHTMLtoPDF() {
     await page.goto(`file://${htmlPath}`, {
       waitUntil: 'networkidle0'
     });
+
+    await page.evaluateHandle('document.fonts.ready');
     
     // 產生 PDF
     await page.pdf({

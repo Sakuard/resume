@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt Huang - Resume</title>
     <style>
+        @font-face {
+            font-family: "ResumeCJK";
+            src: url("file:///System/Library/Fonts/STHeiti%20Medium.ttc") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, "ResumeCJK", sans-serif;
             color: #333;
             line-height: 1.3;
             max-width: 800px;
             margin: 0 auto;
             padding: 5px;
             font-size: 14px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         .header {
@@ -60,6 +69,15 @@
 
         .position-title {
             font-weight: bold;
+            color: #333;
+        }
+
+        .cjk-text {
+            font-family: "ResumeCJK", sans-serif;
+            color: #333;
+            -webkit-text-fill-color: #333;
+            -webkit-text-stroke: 0.15px #333;
+            text-shadow: 0 0 0 #333;
         }
 
         .subtitle {
@@ -148,16 +166,15 @@
     <div class="experience-item">
         <div class="position-header">
             <span class="position-title">Site Reliability Engineer (AWS)</span>
-            <span>Sep 2025 - Current</span>
+            <span>Sep 2025 - Apr 2025</span>
         </div>
         <div class="company-location">
             <span>GoingCloud</span>
         </div>
         <ul>
-            <li>Led billing system's improvements by centralizing fragmented knowledge, building a dedicated development
-                environment, and testable billing logic.</li>
-            <li>Went beyond issue resolution by using customer technical conversations to uncover underlying needs and
-                surface follow-on solution opportunities.</li>
+            <li>Improved billing system reliability by turning fragmented 
+                operational knowledge into repeatable development and validation workflows, including an isolated environment and testable billing logic.</li>
+            <li>Codified existing services into modular IaC, enabling config-driven provisioning and consistent review/deployment controls.</li>
         </ul>
     </div>
 
@@ -171,8 +188,10 @@
         </div>
         <ul>
             <li>Managed GCP and AWS project's infrastructure deployment with infrastructure as code(IaC) and Helm</li>
-            <li>Monitored service's logs and metrics with Datadog and GCP Cloud Monitoring</li>
-            <li>Built a reliable monitoring system with Datadog to enhance service stability</li>
+            <li>Built a PoC onboarding assistant using LLM tool calling and Confluence, with planned tagging and RAG
+                retrieval</li>
+            <li>Using Datadog and GCP Cloud Monitoring to enhance service stability through proactive logs and metrics
+                analysis</li>
             <li>Designed and optimized a reusable Helm Chart to enable flexible and scalable service management</li>
             <li>Modularized GitLab CI configurations into reusable templates for consistent and scalable pipeline
                 management</li>
@@ -223,13 +242,14 @@
         </div>
         <ul>
             <li>Engineered modular Gitlab CI/CD templates</li>
-            <li>Developed and implemented agentic tools in Python</li>
+            <li>Developed and implemented agentic tools in Python with Claude-Code and Codex</li>
         </ul>
     </div>
 
     <div class="experience-item">
         <div class="position-header">
-            <span class="position-title">Engineered a flexible and scalable infrastructure for "程人頻道"</span>
+            <span class="position-title">Engineered a flexible and scalable infrastructure for "<span
+                    class="cjk-text">程人頻道</span>"</span>
         </div>
         <span class="subtitle">techporn.io</span>
         <ul>
